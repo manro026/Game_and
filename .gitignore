@@ -34,3 +34,4 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+test/Assets/Scenes 1/Game_v1.unity
