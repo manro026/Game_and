@@ -1,37 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
+﻿using UnityEngine;
 public class Pause : MonoBehaviour
 {
     public Game game;
+
     public GameObject pausemenu;
-    private GameObject pause;
-    private bool isClick=true;
-    private void Start()
-    {
-     
-    }
+
     private void OnMouseDown()
     {
-       if(isClick==true)
-        {
-            
-            game.pause = true;
-            isClick = false;
-            pause=Instantiate(pausemenu, new Vector2(540, 960), Quaternion.identity);
-            game.enabled = false;
-        }
-       
 
-    }
-    void Update(){
-        if(isClick==true)
-        {   Destroy(pause);
-            game.pause = false;
-            isClick = true;
-            game.enabled = true;
-        }
+        Instantiate(pausemenu, new Vector2(540, 960), Quaternion.identity);
+        game.enabled = false;
     }
 }
