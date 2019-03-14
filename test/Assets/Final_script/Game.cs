@@ -118,20 +118,13 @@ public class Game : MonoBehaviour {
     }
 
     internal IEnumerator svaip_list_right() {
+        audio_sourse.PlayOneShot(audiO, volume);
         clip = list.GetComponent<Animation>();
         clip.Play("right");
         yield return new WaitForSeconds(clip.GetClip("right").length);
         Destroy(list);
         Spawn_list();
-    }
-
-    internal IEnumerator svaip_list_down() {
-        clip = list.GetComponent<Animation>();
-        clip.Play("down");
-        yield return new WaitForSeconds(clip.GetClip("down").length);
-        Destroy(list);
-        Spawn_list();
-    }
+    }  
 
     internal IEnumerator mini_svaip_left() {
 
@@ -159,7 +152,7 @@ public class Game : MonoBehaviour {
         test += 0.02f;
         score++;
         score_text.text = score.ToString();
-        audio_sourse.PlayOneShot(audiO, volume);
+       
     }
 
     private void show_preview() {
