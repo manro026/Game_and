@@ -53,43 +53,57 @@ public class Game : MonoBehaviour {
                     timer -= (Time.deltaTime * test);
                     slider_time.value = timer;
                     isView = true;
-                if (Input.touchCount > 0)
-                {
-                    Touch touch = Input.GetTouch(0);
-                    switch (touch.phase)
-                    {
-
-                        case TouchPhase.Began:
-                            if (touch.position.x > 540)
-                            {
-                                if (preview == 2 || preview == 1)
-                                {
-                                    StartCoroutine(svaip_list_right());
-                                    good_svaip();
-                                }
-                                else
-                                    game_over();
-                            }
-                            else
-                            {
-                                if (preview == 3)
-                                {
-                                    StartCoroutine(svaip_list_left());
-                                    good_svaip();
-                                }
-                                else
-                                    game_over();
-                            }
-                            break;
-                    }
                 }
-            }
                 else if (0 > timer && isView == true)//флаг доб
                 {
                     game_over();
                     isView = false;
                 }
             }
+
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
+            {
+                
+                case TouchPhase.Began:
+                   if( touch.position.x>540)
+                    {
+                        if (preview == 2 || preview == 1)
+                        {
+                            StartCoroutine(svaip_list_right());
+                            good_svaip();
+                        }
+                        else
+                            game_over();
+                    }
+                    else
+                    {
+                        if (preview == 3)
+                        {
+                            StartCoroutine(svaip_list_left());
+                            good_svaip();
+                        }
+                        else
+                            game_over();
+                    }
+                    break;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 
     //public void OnBeginDrag(PointerEventData eventData) {
