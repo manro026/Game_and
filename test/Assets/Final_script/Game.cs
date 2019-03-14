@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
-{
+public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
     public GameObject list_red;
 
     public GameObject list_black;
@@ -47,18 +46,16 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
 
     public bool pause = false;
 
-    internal void Start()
-    {
+    internal void Start() {
         preview_flag = true;
         select_list = Random.Range(1, 4);
-        Spawn_list();        
+        Spawn_list();
     }
 
-    internal void Update()
-    {
+    internal void Update() {
         int score_save;
         score_save = PlayerPrefs.GetInt("score_save");
-        if(score_save<score)
+        if (score_save < score)
             PlayerPrefs.SetInt("score_save", score);
         if (pause == false)
         {
@@ -79,8 +76,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
+    public void OnBeginDrag(PointerEventData eventData) {
 
         if (Mathf.Abs(eventData.delta.x) > Mathf.Abs(eventData.delta.y))
 
@@ -127,12 +123,10 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
         }
     }
 
-    public void OnDrag(PointerEventData eventData)
-    {
+    public void OnDrag(PointerEventData eventData) {
     }
 
-    private void Spawn_list()
-    {
+    private void Spawn_list() {
         timer_flag = false;
         preview = select_list;
         switch (select_list)
@@ -156,15 +150,13 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
         show_preview();
     }
 
-    internal IEnumerator down_list()
-    {
+    internal IEnumerator down_list() {
         clip = list.GetComponent<Animation>();
         clip.Play("start_down");
         yield return new WaitForSeconds(clip.GetClip("start_down").length);
     }
 
-    internal IEnumerator svaip_list_left()
-    {
+    internal IEnumerator svaip_list_left() {
         clip = list.GetComponent<Animation>();
         clip.Play("left");
         yield return new WaitForSeconds(clip.GetClip("left").length);
@@ -172,8 +164,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
         Spawn_list();
     }
 
-    internal IEnumerator svaip_list_right()
-    {
+    internal IEnumerator svaip_list_right() {
         clip = list.GetComponent<Animation>();
         clip.Play("right");
         yield return new WaitForSeconds(clip.GetClip("right").length);
@@ -181,8 +172,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
         Spawn_list();
     }
 
-    IEnumerator svaip_list_down()
-    {
+    internal IEnumerator svaip_list_down() {
         clip = list.GetComponent<Animation>();
         clip.Play("down");
         yield return new WaitForSeconds(clip.GetClip("down").length);
@@ -190,24 +180,20 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler
         Spawn_list();
     }
 
-
-    private void game_over()
-    {
+    private void game_over() {
         Destroy(list);
         Instantiate(end_menu, new Vector2(540, 960), Quaternion.identity);
         timer_flag = true;
         pause = true;
     }
 
-    private void good_svaip()
-    {
+    private void good_svaip() {
         timer += 1;
         score++;
         score_text.text = score.ToString();
     }
 
-    private void show_preview()
-    {
+    private void show_preview() {
         switch (select_list)
         {
             case 1:

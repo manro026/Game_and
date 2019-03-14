@@ -1383,7 +1383,6 @@ GameObject:
   - component: {fileID: 1418200981}
   - component: {fileID: 1418200980}
   - component: {fileID: 1418200979}
-  - component: {fileID: 1418200983}
   - component: {fileID: 1418200982}
   m_Layer: 0
   m_Name: Main Camera
@@ -1482,30 +1481,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1418200983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1418200978}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bfaa3610f9666049a8c6d0574987dbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  list_red: {fileID: 3349452953402720519, guid: 78671806734edfd4b99e6351ea650639,
-    type: 3}
-  list_black: {fileID: 4646692676923794842, guid: 45fe59b496d112b4f978def863548d28,
-    type: 3}
-  list_blue: {fileID: 67850531514180667, guid: 716287b58987f104ebf02270a377a4a1, type: 3}
-  end_menu: {fileID: 8364379033826590361, guid: 09e2ebd6349b02a4eb8c76509053bccb,
-    type: 3}
-  timer: 10
-  slider_time: {fileID: 587619421}
-  score_text: {fileID: 1157748602}
-  preview_image: {fileID: 1386186858}
-  pause: 0
 --- !u!1 &1661136623
 GameObject:
   m_ObjectHideFlags: 0
