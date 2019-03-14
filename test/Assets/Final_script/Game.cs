@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,14 +16,6 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
     private Animation clip;
 
     private int select_list;
-
-    private Vector3 fp;
-
-    private Vector3 lp;
-
-    private float dragDistance;//Минимальная дистанция для определения свайпа
-
-    private List<Vector3> touchPositions = new List<Vector3>();
 
     private bool isView;
 
@@ -46,6 +37,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
     public bool pause = false;
 
+    private float test;
     internal void Start() {
         preview_flag = true;
         select_list = Random.Range(1, 4);
@@ -62,7 +54,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
             {
                 if (!timer_flag && timer > 0)
                 {//таймер
-                    timer -= Time.deltaTime;
+                    timer -= Time.deltaTime * test;
                     slider_time.value = timer;
                     isView = true;
                 }
@@ -189,6 +181,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
     private void good_svaip() {
         timer += 1;
+        test += 0.05f;
         score++;
         score_text.text = score.ToString();
     }
