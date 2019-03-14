@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class Game : MonoBehaviour {
     public GameObject list_red;
@@ -36,9 +35,10 @@ public class Game : MonoBehaviour {
     public Image preview_image;
 
     private float test;
+
     internal void Start() {
         preview_flag = true;
-        select_list = Random.Range(1, 4);
+        select_list = Random.Range(1, 3);
         Spawn_list();
     }
 
@@ -46,13 +46,13 @@ public class Game : MonoBehaviour {
         int score_save;
         score_save = PlayerPrefs.GetInt("score_save");
         if (score_save < score)
-            PlayerPrefs.SetInt("score_save", score);       
-            {
-                if (!timer_flag && timer > 0)
-                {//таймер
-                    timer -= (Time.deltaTime * test);
-                    slider_time.value = timer;
-                    isView = true;
+            PlayerPrefs.SetInt("score_save", score);
+        {
+            if (!timer_flag && timer > 0)
+            {//таймер
+                timer -= (Time.deltaTime * test);
+                slider_time.value = timer;
+                isView = true;
                 if (Input.touchCount > 0)
                 {
                     Touch touch = Input.GetTouch(0);
@@ -62,7 +62,7 @@ public class Game : MonoBehaviour {
                         case TouchPhase.Began:
                             if (touch.position.x > 540)
                             {
-                                if (preview == 2 || preview == 1)
+                                if (preview == 1)
                                 {
                                     StartCoroutine(svaip_list_right());
                                     good_svaip();
@@ -72,7 +72,7 @@ public class Game : MonoBehaviour {
                             }
                             else
                             {
-                                if (preview == 3)
+                                if (preview == 2)
                                 {
                                     StartCoroutine(svaip_list_left());
                                     good_svaip();
@@ -84,84 +84,30 @@ public class Game : MonoBehaviour {
                     }
                 }
             }
-                else if (0 > timer && isView == true)//флаг доб
-                {
-                    game_over();
-                    isView = false;
-                }
+            else if (0 > timer && isView == true)//флаг доб
+            {
+                game_over();
+                isView = false;
             }
+        }
     }
 
-    //public void OnBeginDrag(PointerEventData eventData) {
-
-    //    if (Mathf.Abs(eventData.delta.x) > Mathf.Abs(eventData.delta.y))
-
-    //    {
-
-    //        if (eventData.delta.x > 0)
-    //        {
-    //            if (preview == 2|| preview == 1)
-    //            {
-    //                StartCoroutine(svaip_list_right());
-    //                good_svaip();
-    //            }
-    //            else
-    //                game_over();
-    //        }
-    //        else
-    //        {
-    //            if (preview == 3)
-    //            {
-    //                StartCoroutine(svaip_list_left());
-    //                good_svaip();
-    //            }
-    //            else
-    //                game_over();
-    //        }
-
-    //    }
-
-    //   /* else
-
-    //    {
-
-    //        if (eventData.delta.y < 0)
-    //        {
-    //            if (preview == 1)
-    //            {
-    //                StartCoroutine(svaip_list_down());
-    //                good_svaip();
-    //            }
-    //            else
-    //                game_over();
-    //        }
-
-    //    }*/
-    //}
-
-    //public void OnDrag(PointerEventData eventData) {
-    //}
- 
     private void Spawn_list() {
         timer_flag = false;
         preview = select_list;
         switch (select_list)
         {
             case 1:
-                //list = Instantiate(list_black);
-                //StartCoroutine(down_list());
-               // break;
-            case 2:
                 list = Instantiate(list_red);
                 StartCoroutine(down_list());
                 break;
-            case 3:
+            case 2:
                 list = Instantiate(list_blue);
                 StartCoroutine(down_list());
                 break;
         }
         if (!preview_flag)
-            select_list = Random.Range(1, 4);
+            select_list = Random.Range(1, 3);
         preview_flag = false;
         show_preview();
     }
@@ -213,12 +159,9 @@ public class Game : MonoBehaviour {
         switch (select_list)
         {
             case 1:
-               // preview_image.color = new Color(0, 0, 0, 1);
-               // break;
-            case 2:
                 preview_image.color = new Color32(157, 103, 91, 255);
                 break;
-            case 3:
+            case 2:
                 preview_image.color = new Color32(68, 123, 167, 255);
                 break;
         }
