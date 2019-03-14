@@ -3,37 +3,23 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Game : MonoBehaviour {
     public GameObject list_red;
-
-    public GameObject list_black;
-
     public GameObject list_blue;
-
     public GameObject end_menu;
-
-    private GameObject list;
-
+    public GameObject mini_left;
+    public GameObject mini_right;
+    public GameObject list;
+    public GameObject mini_list;
+    private Animation mini_clip;
     private Animation clip;
-
     private int select_list;
-
-    private bool isView;
-
     public float timer = 25f;
-
     private bool timer_flag = true;
-
     public Slider slider_time;
-
     private int score;
-
     public Text score_text;
-
     private bool preview_flag;
-
     private float preview;
-
     public Image preview_image;
-
     private float test;
     public AudioClip audiO;
     public float volume;
@@ -57,7 +43,6 @@ public class Game : MonoBehaviour {
             {//таймер
                 timer -= (Time.deltaTime * test);
                 slider_time.value = timer;
-                isView = true;
                 if (Input.touchCount > 0)
                 {
                     Touch touch = Input.GetTouch(0);
@@ -71,6 +56,7 @@ public class Game : MonoBehaviour {
                                 {
                                     StartCoroutine(svaip_list_right());
                                     good_svaip();
+                                    StartCoroutine(mini_svaip_right());
                                 }
                                 else
                                     game_over();
@@ -81,6 +67,7 @@ public class Game : MonoBehaviour {
                                 {
                                     StartCoroutine(svaip_list_left());
                                     good_svaip();
+                                    StartCoroutine(mini_svaip_left());
                                 }
                                 else
                                     game_over();
@@ -89,10 +76,9 @@ public class Game : MonoBehaviour {
                     }
                 }
             }
-            else if (0 > timer && isView == true)//флаг доб
+            else if (0 > timer)
             {
                 game_over();
-                isView = false;
             }
         }
     }
@@ -147,6 +133,21 @@ public class Game : MonoBehaviour {
         Spawn_list();
     }
 
+    internal IEnumerator mini_svaip_left() {
+
+        mini_list = Instantiate(mini_left);
+        mini_clip = mini_list.GetComponent<Animation>();
+        mini_clip.Play("mini_down");
+        yield return new WaitForSeconds(mini_clip.GetClip("mini_down").length);
+
+    }
+    internal IEnumerator mini_svaip_right() {
+
+        mini_list = Instantiate(mini_right);
+        mini_clip = mini_list.GetComponent<Animation>();
+        mini_clip.Play("xf");
+        yield return new WaitForSeconds(mini_clip.GetClip("xf").length);
+    }
     private void game_over() {
         Destroy(list);
         Instantiate(end_menu, new Vector2(540, 960), Quaternion.identity);

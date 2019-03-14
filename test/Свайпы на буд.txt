@@ -1,0 +1,49 @@
+  //public void OnBeginDrag(PointerEventData eventData) {
+
+    //    if (Mathf.Abs(eventData.delta.x) > Mathf.Abs(eventData.delta.y))
+
+    //    {
+
+    //        if (eventData.delta.x > 0)
+    //        {
+    //            if (preview == 2|| preview == 1)
+    //            {
+    //                StartCoroutine(svaip_list_right());
+    //                good_svaip();
+    //            }
+    //            else
+    //                game_over();
+    //        }
+    //        else
+    //        {
+    //            if (preview == 3)
+    //            {
+    //                StartCoroutine(svaip_list_left());
+    //                good_svaip();
+    //            }
+    //            else
+    //                game_over();
+    //        }
+
+    //    }
+
+    //   /* else
+
+    //    {
+
+    //        if (eventData.delta.y < 0)
+    //        {
+    //            if (preview == 1)
+    //            {
+    //                StartCoroutine(svaip_list_down());
+    //                good_svaip();
+    //            }
+    //            else
+    //                game_over();
+    //        }
+
+    //    }*/
+    //}
+
+    //public void OnDrag(PointerEventData eventData) {
+    //}
