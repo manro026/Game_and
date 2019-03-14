@@ -35,14 +35,16 @@ public class Game : MonoBehaviour {
     public Image preview_image;
 
     private float test;
-    public AudioClip audio;
+    public AudioClip audiO;
     public float volume;
+    private AudioSource audio_sourse;
 
 
     internal void Start() {
         preview_flag = true;
         select_list = Random.Range(1, 3);
         Spawn_list();
+        audio_sourse = GetComponent<AudioSource>();
     }
 
     internal void Update() {
@@ -156,7 +158,7 @@ public class Game : MonoBehaviour {
         test += 0.02f;
         score++;
         score_text.text = score.ToString();
-        AudioSource.PlayClipAtPoint(audio, transform.position, volume);
+        audio_sourse.PlayOneShot(audiO, volume);
     }
 
     private void show_preview() {
