@@ -1689,6 +1689,8 @@ MonoBehaviour:
   slider_time: {fileID: 587619421}
   score_text: {fileID: 1157748602}
   preview_image: {fileID: 1386186858}
+  audio: {fileID: 8300000, guid: 721d9e70929e69e47976b844958a80d6, type: 3}
+  volume: 10
 --- !u!114 &1845619690
 MonoBehaviour:
   m_ObjectHideFlags: 0

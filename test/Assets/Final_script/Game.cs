@@ -35,6 +35,9 @@ public class Game : MonoBehaviour {
     public Image preview_image;
 
     private float test;
+    public AudioClip audio;
+    public float volume;
+
 
     internal void Start() {
         preview_flag = true;
@@ -153,6 +156,7 @@ public class Game : MonoBehaviour {
         test += 0.02f;
         score++;
         score_text.text = score.ToString();
+        AudioSource.PlayClipAtPoint(audio, transform.position, volume);
     }
 
     private void show_preview() {
