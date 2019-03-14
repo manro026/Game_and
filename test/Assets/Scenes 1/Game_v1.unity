@@ -592,8 +592,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 270892278}
   - component: {fileID: 270892279}
+=======
+  - component: {fileID: 305070804}
+  - component: {fileID: 305070805}
+>>>>>>> parent of 9718915... animation
   m_Layer: 0
   m_Name: bot
   m_TagString: Untagged
@@ -674,8 +679,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 =======
 >>>>>>> parent of e2084f0... Update Game_v1.unity
+=======
+>>>>>>> parent of 9718915... animation
 --- !u!1 &532323466
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,8 +1801,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1661136625}
   - component: {fileID: 1661136624}
+=======
+  - component: {fileID: 1430093749}
+  - component: {fileID: 1430093750}
+>>>>>>> parent of 9718915... animation
   m_Layer: 0
   m_Name: blue_stripe
   m_TagString: Untagged
@@ -1819,10 +1832,17 @@ RectTransform:
   m_Father: {fileID: 740488121}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_AnchorMin: {x: 0.88855565, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 1.921814, y: -41.5}
   m_SizeDelta: {x: -87.94, y: -1402.78}
+=======
+  m_AnchorMin: {x: 0.88600004, y: 0}
+  m_AnchorMax: {x: 1, y: 0.7374063}
+  m_AnchoredPosition: {x: 2.921814, y: 82.20001}
+  m_SizeDelta: {x: -89.9, y: -1030.5}
+>>>>>>> parent of 9718915... animation
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1430093750
 >>>>>>> parent of 8fb93e6... redisigne
@@ -1875,6 +1895,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -1967,6 +1988,8 @@ RectTransform:
   m_AnchoredPosition: {x: -711, y: -13}
   m_SizeDelta: {x: -113.72998, y: -1820.6}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> parent of 9718915... animation
 --- !u!1 &1801196868
 GameObject:
   m_ObjectHideFlags: 0
