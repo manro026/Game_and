@@ -9,13 +9,10 @@ public class Pause : MonoBehaviour
     public GameObject pausemenu;
     private GameObject pause;
     private bool isClick=true;
-
     private void Start()
     {
      
     }
-
-
     private void OnMouseDown()
     {
        if(isClick==true)
@@ -24,7 +21,7 @@ public class Pause : MonoBehaviour
             game.pause = true;
             isClick = false;
             pause=Instantiate(pausemenu, new Vector2(540, 960), Quaternion.identity);
-            game.enabled = true;
+            game.enabled = false;
         }
        
 
