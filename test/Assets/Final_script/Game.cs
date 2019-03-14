@@ -76,7 +76,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
             if (eventData.delta.x > 0)
             {
-                if (preview == 2)
+                if (preview == 2|| preview == 1)
                 {
                     StartCoroutine(svaip_list_right());
                     good_svaip();
@@ -97,7 +97,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
         }
 
-        else
+       /* else
 
         {
 
@@ -112,7 +112,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
                     game_over();
             }
 
-        }
+        }*/
     }
 
     public void OnDrag(PointerEventData eventData) {
@@ -124,9 +124,9 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
         switch (select_list)
         {
             case 1:
-                list = Instantiate(list_black);
-                StartCoroutine(down_list());
-                break;
+                //list = Instantiate(list_black);
+                //StartCoroutine(down_list());
+               // break;
             case 2:
                 list = Instantiate(list_red);
                 StartCoroutine(down_list());
@@ -190,8 +190,8 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
         switch (select_list)
         {
             case 1:
-                preview_image.color = new Color(0, 0, 0, 1);
-                break;
+               // preview_image.color = new Color(0, 0, 0, 1);
+               // break;
             case 2:
                 preview_image.color = new Color32(157, 103, 91, 255);
                 break;
