@@ -35,8 +35,6 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
     public Image preview_image;
 
-    public bool pause = false;
-
     private float test;
     internal void Start() {
         preview_flag = true;
@@ -48,9 +46,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
         int score_save;
         score_save = PlayerPrefs.GetInt("score_save");
         if (score_save < score)
-            PlayerPrefs.SetInt("score_save", score);
-        if (pause == false)
-        {
+            PlayerPrefs.SetInt("score_save", score);       
             {
                 if (!timer_flag && timer > 0)
                 {//таймер
@@ -63,9 +59,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
                     game_over();
                     isView = false;
                 }
-            }
-
-        }
+            }        
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -176,7 +170,6 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
         Destroy(list);
         Instantiate(end_menu, new Vector2(540, 960), Quaternion.identity);
         timer_flag = true;
-        pause = true;
     }
 
     private void good_svaip() {
