@@ -1786,8 +1786,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD
 --- !u!212 &1661136624
+<<<<<<< HEAD
 =======
 --- !u!224 &1430093749
 RectTransform:
@@ -1810,6 +1810,8 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1430093750
 >>>>>>> parent of 8fb93e6... redisigne
+=======
+>>>>>>> parent of 2847d22... 1
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1857,6 +1859,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 --- !u!1 &1661136623
@@ -1925,6 +1928,8 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 >>>>>>> parent of 8fb93e6... redisigne
+=======
+>>>>>>> parent of 2847d22... 1
 --- !u!224 &1661136625
 RectTransform:
   m_ObjectHideFlags: 0
