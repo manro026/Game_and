@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
+public class Game : MonoBehaviour {
     public GameObject list_red;
 
     public GameObject list_black;
@@ -50,7 +50,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
             {
                 if (!timer_flag && timer > 0)
                 {//таймер
-                    timer -= (Time.deltaTime + test);
+                    timer -= (Time.deltaTime * test);
                     slider_time.value = timer;
                     isView = true;
                 }
@@ -59,59 +59,103 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
                     game_over();
                     isView = false;
                 }
-            }        
-    }
+            }
 
-    public void OnBeginDrag(PointerEventData eventData) {
-
-        if (Mathf.Abs(eventData.delta.x) > Mathf.Abs(eventData.delta.y))
-
+        if (Input.touchCount > 0)
         {
-
-            if (eventData.delta.x > 0)
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase)
             {
-                if (preview == 2|| preview == 1)
-                {
-                    StartCoroutine(svaip_list_right());
-                    good_svaip();
-                }
-                else
-                    game_over();
+                
+                case TouchPhase.Began:
+                   if( touch.position.x>540)
+                    {
+                        if (preview == 2 || preview == 1)
+                        {
+                            StartCoroutine(svaip_list_right());
+                            good_svaip();
+                        }
+                        else
+                            game_over();
+                    }
+                    else
+                    {
+                        if (preview == 3)
+                        {
+                            StartCoroutine(svaip_list_left());
+                            good_svaip();
+                        }
+                        else
+                            game_over();
+                    }
+                    break;
             }
-            else
-            {
-                if (preview == 3)
-                {
-                    StartCoroutine(svaip_list_left());
-                    good_svaip();
-                }
-                else
-                    game_over();
-            }
-
         }
 
-       /* else
 
-        {
 
-            if (eventData.delta.y < 0)
-            {
-                if (preview == 1)
-                {
-                    StartCoroutine(svaip_list_down());
-                    good_svaip();
-                }
-                else
-                    game_over();
-            }
 
-        }*/
+
+
+
+
+
+
+
+
+
     }
 
-    public void OnDrag(PointerEventData eventData) {
-    }
+    //public void OnBeginDrag(PointerEventData eventData) {
 
+    //    if (Mathf.Abs(eventData.delta.x) > Mathf.Abs(eventData.delta.y))
+
+    //    {
+
+    //        if (eventData.delta.x > 0)
+    //        {
+    //            if (preview == 2|| preview == 1)
+    //            {
+    //                StartCoroutine(svaip_list_right());
+    //                good_svaip();
+    //            }
+    //            else
+    //                game_over();
+    //        }
+    //        else
+    //        {
+    //            if (preview == 3)
+    //            {
+    //                StartCoroutine(svaip_list_left());
+    //                good_svaip();
+    //            }
+    //            else
+    //                game_over();
+    //        }
+
+    //    }
+
+    //   /* else
+
+    //    {
+
+    //        if (eventData.delta.y < 0)
+    //        {
+    //            if (preview == 1)
+    //            {
+    //                StartCoroutine(svaip_list_down());
+    //                good_svaip();
+    //            }
+    //            else
+    //                game_over();
+    //        }
+
+    //    }*/
+    //}
+
+    //public void OnDrag(PointerEventData eventData) {
+    //}
+ 
     private void Spawn_list() {
         timer_flag = false;
         preview = select_list;
@@ -174,7 +218,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
     private void good_svaip() {
         timer += 1;
-        test += 0.002f;
+        test += 0.02f;
         score++;
         score_text.text = score.ToString();
     }
