@@ -19,7 +19,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
     private bool isView;
 
-    public float timer = 10f;
+    public float timer = 25f;
 
     private bool timer_flag = true;
 
@@ -50,7 +50,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
             {
                 if (!timer_flag && timer > 0)
                 {//таймер
-                    timer -= Time.deltaTime * test;
+                    timer -= (Time.deltaTime + test);
                     slider_time.value = timer;
                     isView = true;
                 }
@@ -174,7 +174,7 @@ public class Game : MonoBehaviour, IDragHandler, IBeginDragHandler {
 
     private void good_svaip() {
         timer += 1;
-        test += 0.05f;
+        test += 0.002f;
         score++;
         score_text.text = score.ToString();
     }
