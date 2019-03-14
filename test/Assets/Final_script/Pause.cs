@@ -7,7 +7,6 @@ public class Pause : MonoBehaviour
 
     private void OnMouseDown()
     {
-
         Instantiate(pausemenu, new Vector2(540, 960), Quaternion.identity);
         game.enabled = false;
     }
