@@ -252,7 +252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &171599988
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -548,8 +548,12 @@ SpriteRenderer:
   m_Sprite: {fileID: 21300000, guid: e623cb7d5f1377d4596b1bed51b1ccc2, type: 3}
 =======
   m_SortingOrder: -1
+<<<<<<< HEAD
   m_Sprite: {fileID: 21300000, guid: bc17a5ad1a503be47925dd60f41a8be3, type: 3}
 >>>>>>> parent of 8fb93e6... redisigne
+=======
+  m_Sprite: {fileID: 21300000, guid: 58127d39661b46240b3bd94abbcb1c26, type: 3}
+>>>>>>> parent of e2084f0... Update Game_v1.unity
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -560,6 +564,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!224 &251920383
 RectTransform:
   m_ObjectHideFlags: 0
@@ -669,6 +674,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+=======
+>>>>>>> parent of e2084f0... Update Game_v1.unity
 --- !u!1 &532323466
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,10 +945,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IsActive: 1
 =======
   m_IsActive: 0
 >>>>>>> parent of 8fb93e6... redisigne
+=======
+  m_IsActive: 1
+>>>>>>> parent of e2084f0... Update Game_v1.unity
 --- !u!224 &863782201
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1100,10 +1111,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_IsActive: 1
 =======
   m_IsActive: 0
 >>>>>>> parent of 8fb93e6... redisigne
+=======
+  m_IsActive: 1
+>>>>>>> parent of e2084f0... Update Game_v1.unity
 --- !u!212 &1128285749
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1769,6 +1784,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &1661136623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,6 +1878,8 @@ SpriteRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of e2084f0... Update Game_v1.unity
 --- !u!1 &1661136623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1661136624
 SpriteRenderer:
   m_ObjectHideFlags: 0
