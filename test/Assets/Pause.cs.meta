@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: f1ba42bc77ece354c9881309753a2be7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - game: {instanceID: 0}
+  - pausemenu: {fileID: 2830810959543788996, guid: edd39781158f6d641a725abe5f15fbcb,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
