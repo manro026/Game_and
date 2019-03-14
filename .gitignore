@@ -34,3 +34,11 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+test/Assets/Mini.controller
+test/Assets/Mini.controller.meta
+test/Assets/Prefabs/mini_down.anim.meta
+test/Assets/Prefabs/mini_down_right.anim
+test/Assets/Prefabs/mini_down_right.anim.meta
+test/Assets/Prefabs/mini_right.controller
+test/Assets/Prefabs/mini_right.controller.meta
+test/Assets/Prefabs/xf.anim

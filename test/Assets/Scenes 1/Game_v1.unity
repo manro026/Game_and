@@ -324,6 +324,9 @@ GameObject:
 =======
   - component: {fileID: 305070804}
   - component: {fileID: 305070805}
+<<<<<<< HEAD
+>>>>>>> parent of 9718915... animation
+=======
 >>>>>>> parent of 9718915... animation
   m_Layer: 0
   m_Name: bot
@@ -1505,6 +1508,9 @@ GameObject:
 =======
   - component: {fileID: 1430093749}
   - component: {fileID: 1430093750}
+<<<<<<< HEAD
+>>>>>>> parent of 9718915... animation
+=======
 >>>>>>> parent of 9718915... animation
   m_Layer: 0
   m_Name: blue_stripe
@@ -1585,6 +1591,7 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!224 &1661136625
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1604,6 +1611,8 @@ RectTransform:
   m_AnchoredPosition: {x: -711, y: -13}
   m_SizeDelta: {x: -113.72998, y: -1820.6}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> parent of 9718915... animation
 =======
 >>>>>>> parent of 9718915... animation
 --- !u!1 &1801196868
