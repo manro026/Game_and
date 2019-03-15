@@ -14,7 +14,7 @@ public class Game : MonoBehaviour {
     private Animation clip;
     private int select_list;
     public float timer = 25f;
-    private bool timer_flag = true;
+    public bool timer_flag = true;
     public Slider slider_time;
     private int score;
     public Text score_text;
@@ -23,6 +23,7 @@ public class Game : MonoBehaviour {
     public Image preview_image;
     private float test;
     public AudioClip audiO;
+    public AudioClip audigameover;
     public float volume;
     private AudioSource audio_sourse;
 
@@ -145,6 +146,7 @@ public class Game : MonoBehaviour {
         yield return new WaitForSeconds(mini_clip.GetClip("mini_down_right").length);
     }
     private void game_over() {
+        audio_sourse.PlayOneShot(audigameover, volume);
         Destroy(list);
         Instantiate(end_menu, new Vector2(540, 960), Quaternion.identity);
         timer_flag = true;

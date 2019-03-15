@@ -5,10 +5,13 @@
  using System.Collections;
  public class RewardedVideoScript : MonoBehaviour
  {
-     const string adUnitIdRewardedVideo = "ca-app-pub-3940256099942544/5224354917";   // Your Key
-     public  RewardBasedVideoAd rewardBasedVideo;
- 
+    const string adUnitIdRewardedVideo = "ca-app-pub-3940256099942544/5224354917";   // Your Key
+    public  RewardBasedVideoAd rewardBasedVideo;
+    private Game game;
+    private GameObject gameover;
      internal void Start() {
+        game = GameObject.FindWithTag("panel").GetComponent<Game>();
+        gameover = GameObject.FindWithTag("gameover");
         rewardBasedVideo = RewardBasedVideoAd.Instance;
         MobileAds.Initialize("ca-app-pub-3940256099942544~3347511713");
         RequestRewardBasedVideo ();
@@ -24,4 +27,9 @@
       .Build (), adUnitIdRewardedVideo);
      
      }
+     public void HandleRewardBasedVideoRewarded(object sender, Reward args)
+    {
+        game.timer_flag=false;
+        Destroy(gameover);
+    }
  }

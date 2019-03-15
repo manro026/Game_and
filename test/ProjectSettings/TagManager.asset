@@ -11,6 +11,8 @@ TagManager:
   - Right
   - list
   - pausemenu
+  - panel
+  - gameover
   layers:
   - Default
   - TransparentFX
