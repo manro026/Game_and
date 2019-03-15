@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="firebase_database_url" translatable="false">https://paper-sort.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">196615657374</string>
+  <string name="google_storage_bucket" translatable="false">paper-sort.appspot.com</string>
+  <string name="project_id" translatable="false">paper-sort</string>
+  <string name="google_api_key" translatable="false">AIzaSyDIeapjyBZ-XupsB0igM5gB8mYBqO6cPvA</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDIeapjyBZ-XupsB0igM5gB8mYBqO6cPvA</string>
+  <string name="google_app_id" translatable="false">1:196615657374:android:c9d8fed55d6bdb7a</string>
+  <string name="default_web_client_id" translatable="false">196615657374-uvuqc5bl1ud3lokveiktf4q6o7o7ev3n.apps.googleusercontent.com</string>
+</resources>

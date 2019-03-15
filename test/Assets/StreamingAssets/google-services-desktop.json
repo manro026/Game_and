@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "196615657374",
+    "firebase_url": "https://paper-sort.firebaseio.com",
+    "project_id": "paper-sort",
+    "storage_bucket": "paper-sort.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196615657374:android:c9d8fed55d6bdb7a",
+        "android_client_info": {
+          "package_name": "com.DMZ.papersort"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196615657374-uvuqc5bl1ud3lokveiktf4q6o7o7ev3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIeapjyBZ-XupsB0igM5gB8mYBqO6cPvA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

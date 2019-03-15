@@ -26,15 +26,15 @@ public class Game : MonoBehaviour {
     public float volume;
     private AudioSource audio_sourse;
 
-    
+
     internal void Start() {
         preview_flag = true;
         select_list = Random.Range(1, 3);
         Spawn_list();
         audio_sourse = GetComponent<AudioSource>();
-       
-    }
 
+    }
+    
     internal void Update() {
         int score_save;
         score_save = PlayerPrefs.GetInt("score_save");

@@ -6,52 +6,22 @@
  public class RewardedVideoScript : MonoBehaviour
  {
      const string adUnitIdRewardedVideo = "ca-app-pub-3940256099942544/5224354917";   // Your Key
-     protected  RewardBasedVideoAd rewardBasedVideo;
+     public  RewardBasedVideoAd rewardBasedVideo;
  
-     void OnEnable ()
-     {
-         
-         rewardBasedVideo = RewardBasedVideoAd.Instance;
-         // RewardBasedVideoAd is a singleton, so handlers should only be registered once.
-         rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
- 
+     internal void Start() {
+        rewardBasedVideo = RewardBasedVideoAd.Instance;
+        MobileAds.Initialize("ca-app-pub-3940256099942544~3347511713");
+        RequestRewardBasedVideo ();
      }
-     void Start ()
+     private void OnMouseDown()
      {
-         RequestRewardBasedVideo ();
+         rewardBasedVideo.Show ();
      }
-     void OnDisable ()
-     {
-         rewardBasedVideo.OnAdRewarded -= HandleRewardBasedVideoRewarded;
-     }
-     protected AdRequest createAdRequest ()
-     {
-         AdRequest request = new AdRequest.Builder ().AddTestDevice(AdRequest.TestDeviceSimulator).Build();       // Simulator.
-         //        .AddTestDevice("E32C2E79AD1DAE9D9AE99EF4F61E80ED")  // My test device.
-                // .Build();
-         return request;
-     }
- 
      public void RequestRewardBasedVideo ()
      {
- 
-         rewardBasedVideo.LoadAd (createAdRequest (), adUnitIdRewardedVideo);
+         rewardBasedVideo.LoadAd (new AdRequest.Builder ()
+      .AddTestDevice ("899D4765E14315B984A6EBF2C6A48441")
+      .Build (), adUnitIdRewardedVideo);
      
-     }
- 
-     public void ShowRewardBasedVideo ()
-     {
- 
-         if (rewardBasedVideo.IsLoaded ()) {
-             rewardBasedVideo.Show ();
-         } else {
-             RequestRewardBasedVideo ();
-         }
- 
-     }
-     public void HandleRewardBasedVideoRewarded (object sender, Reward args)
-     {
-         //Call your function here
- 
      }
  }
