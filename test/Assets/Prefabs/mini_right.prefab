@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 980, y: 840}
-  m_SizeDelta: {x: 7.31, y: 10.33}
+  m_AnchoredPosition: {x: 960, y: 831.28}
+  m_SizeDelta: {x: 12, y: 12}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &1523441501730800532
 SpriteRenderer:
@@ -96,7 +96,6 @@ Animation:
   serializedVersion: 3
   m_Animation: {fileID: 0}
   m_Animations:
-  - {fileID: 7400000, guid: f26997230e6878c49bb229627db5989a, type: 2}
   - {fileID: 7400000, guid: a7a3818660999b84ab00df69e2c72ff6, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0

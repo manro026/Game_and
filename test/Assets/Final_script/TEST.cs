@@ -1,18 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TEST : MonoBehaviour
 {
     private GameObject s;
-    private Game game;
-    private void Update() {
+    public Text text;
 
-        s = GameObject.FindGameObjectWithTag("pausemenu");
-        if (s ==null )
+    private void Start() {
+        Resolution[] resolutions = Screen.resolutions;
+
+        // Print the resolutions
+        foreach (var res in resolutions)
         {
-            game = GameObject.FindWithTag("Respawn").GetComponent<Game>();
-            game.enabled = true;
+            Debug.Log(res.width + "x" + res.height + " : " + res.refreshRate);
+            text.text = Screen.width.ToString();
         }
     }
 }

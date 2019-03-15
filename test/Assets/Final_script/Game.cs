@@ -8,8 +8,8 @@ public class Game : MonoBehaviour {
     public GameObject end_menu;
     public GameObject mini_left;
     public GameObject mini_right;
-    public GameObject list;
-    public GameObject mini_list;
+    private GameObject list;
+    private GameObject mini_list;
     private Animation mini_clip;
     private Animation clip;
     private int select_list;
@@ -137,11 +137,11 @@ public class Game : MonoBehaviour {
 
     }
     internal IEnumerator mini_svaip_right() {
-
+        
         mini_list = Instantiate(mini_right);
         mini_clip = mini_list.GetComponent<Animation>();
-        mini_clip.Play("xf");
-        yield return new WaitForSeconds(mini_clip.GetClip("xf").length);
+        mini_clip.Play("mini_down_right");
+        yield return new WaitForSeconds(mini_clip.GetClip("mini_down_right").length);
     }
     private void game_over() {
         Destroy(list);
@@ -153,8 +153,7 @@ public class Game : MonoBehaviour {
         timer += 1;
         test += 0.02f;
         score++;
-        score_text.text = score.ToString();
-       
+        score_text.text = score.ToString();       
     }
 
     private void show_preview() {
