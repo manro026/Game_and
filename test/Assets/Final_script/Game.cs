@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using GoogleMobileAds.Api;
 public class Game : MonoBehaviour {
     public GameObject list_red;
     public GameObject list_blue;
@@ -25,12 +26,13 @@ public class Game : MonoBehaviour {
     public float volume;
     private AudioSource audio_sourse;
 
-
+    
     internal void Start() {
         preview_flag = true;
         select_list = Random.Range(1, 3);
         Spawn_list();
         audio_sourse = GetComponent<AudioSource>();
+       
     }
 
     internal void Update() {
@@ -159,10 +161,10 @@ public class Game : MonoBehaviour {
         switch (select_list)
         {
             case 1:
-                preview_image.color = new Color32(157, 103, 91, 255);
+                preview_image.color = new Color32(114, 92, 94, 255);
                 break;
             case 2:
-                preview_image.color = new Color32(68, 123, 167, 255);
+                preview_image.color = new Color32(75, 97, 110, 255);
                 break;
         }
     }
