@@ -112,6 +112,7 @@ public class Game : MonoBehaviour {
     }
 
     internal IEnumerator svaip_list_left() {
+        audio_sourse.PlayOneShot(audiO, volume);
         clip = list.GetComponent<Animation>();
         clip.Play("left");
         yield return new WaitForSeconds(clip.GetClip("left").length);
