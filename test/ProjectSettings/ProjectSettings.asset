@@ -118,7 +118,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleVersion: 1.0
+  bundleVersion: 1.1
   preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
@@ -156,7 +156,7 @@ PlayerSettings:
     Android: com.DMZ.papersort
     Standalone: com.Company.ProductName
   buildNumber: {}
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 1
@@ -323,31 +323,31 @@ PlayerSettings:
       m_Kind: 2
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 29d11f8c7df0e0943adc5fdbd176bcb5, type: 3}
+      - {fileID: 2800000, guid: 7a3d5f99b77cde7408caba7e9fbdef2e, type: 3}
       m_Width: 192
       m_Height: 192
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: a8fe69d14f5fe6042ae9b583992153d6, type: 3}
+      - {fileID: 2800000, guid: 9741b9256f0807f4cb72857bd3d26a05, type: 3}
       m_Width: 144
       m_Height: 144
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 0344f8845cd1290419bc5eed09125284, type: 3}
+      - {fileID: 2800000, guid: bd918cc4c4f6ad844b06d6567e5af9af, type: 3}
       m_Width: 96
       m_Height: 96
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 74c66ac62da873142ad613d3196477c8, type: 3}
+      - {fileID: 2800000, guid: 2e028518db4cf98409f089cc37c425bf, type: 3}
       m_Width: 72
       m_Height: 72
       m_Kind: 0
       m_SubKind: 
     - m_Textures:
-      - {fileID: 2800000, guid: 9a037a0279c085742bb9851d9cc7cc21, type: 3}
+      - {fileID: 2800000, guid: 92a8725aa632b044ca5c63f0c36fdabe, type: 3}
       m_Width: 48
       m_Height: 48
       m_Kind: 0

@@ -21,12 +21,12 @@ public class Game : MonoBehaviour {
     private bool preview_flag;
     private float preview;
     public Image preview_image;
-    private float test;
+    private float test=1f;
     public AudioClip audiO;
     public AudioClip audigameover;
     public float volume;
     private AudioSource audio_sourse;
-
+    private bool flagover = false;
 
     internal void Start() {
         preview_flag = true;
@@ -79,7 +79,7 @@ public class Game : MonoBehaviour {
                     }
                 }
             }
-            else if (0 > timer)
+            else if (0 > timer && !flagover)
             {
                 game_over();
             }
@@ -88,6 +88,7 @@ public class Game : MonoBehaviour {
 
     public void Spawn_list() {
         timer_flag = false;
+        flagover = false;
         preview = select_list;
         switch (select_list)
         {
@@ -146,6 +147,8 @@ public class Game : MonoBehaviour {
         yield return new WaitForSeconds(mini_clip.GetClip("mini_down_right").length);
     }
     private void game_over() {
+        flagover = true;
+        enabled = false;
         audio_sourse.PlayOneShot(audigameover, volume);
         Destroy(list);
         Instantiate(end_menu, new Vector2(540, 960), Quaternion.identity);

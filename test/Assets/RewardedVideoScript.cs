@@ -8,12 +8,15 @@
     public  RewardBasedVideoAd rewardBasedVideo;
     private Game game;
     private GameObject gameover;
-    
+    private bool watched=false;
     private static ILogger logger = Debug.unityLogger;
      internal void Start() {
         rewardBasedVideo = RewardBasedVideoAd.Instance;
         rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
         MobileAds.Initialize("ca-app-pub-3254112346644116~7744970686");
+        game = GameObject.FindWithTag("panel").GetComponent<Game>();
+        gameover = GameObject.FindWithTag("gameover");
+        watched=false;
         RequestRewardBasedVideo ();
      }
      private void OnMouseDown()
@@ -24,7 +27,17 @@
         else{
             RequestRewardBasedVideo ();
             }
-            
+        if (game.timer<25){
+            game.timer=25f;
+        }
+        game.enabled = false;
+     }
+     public void Update(){
+         if (watched){
+        Destroy(game.list);
+        Destroy(gameover);
+        game.Spawn_list();
+         }
      }
      public void RequestRewardBasedVideo ()
      {
@@ -33,11 +46,6 @@
      }
      public void HandleRewardBasedVideoRewarded(object sender, Reward args)
     {
-        game = GameObject.FindWithTag("panel").GetComponent<Game>();
-        gameover = GameObject.FindWithTag("gameover");
-        Destroy(gameover);
-        Destroy(game.list);
-        game.Spawn_list();
-        
+        watched=true;
     }
  }
