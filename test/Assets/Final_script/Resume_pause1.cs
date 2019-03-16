@@ -11,7 +11,7 @@ public class Resume_pause1 : MonoBehaviour
         s = GameObject.FindGameObjectWithTag("pausemenu");
         if (s == null)
         {
-            game = GameObject.FindWithTag("Respawn").GetComponent<Game>();
+            game = GameObject.FindWithTag("panel").GetComponent<Game>();
             game.enabled = true;
         }
     }

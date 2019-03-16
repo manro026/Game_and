@@ -5,31 +5,39 @@
  using System.Collections;
  public class RewardedVideoScript : MonoBehaviour
  {
-    const string adUnitIdRewardedVideo = "ca-app-pub-3940256099942544/5224354917";   // Your Key
     public  RewardBasedVideoAd rewardBasedVideo;
     private Game game;
     private GameObject gameover;
+    
+    private static ILogger logger = Debug.unityLogger;
      internal void Start() {
-        game = GameObject.FindWithTag("panel").GetComponent<Game>();
-        gameover = GameObject.FindWithTag("gameover");
         rewardBasedVideo = RewardBasedVideoAd.Instance;
-        MobileAds.Initialize("ca-app-pub-3940256099942544~3347511713");
+        rewardBasedVideo.OnAdRewarded += HandleRewardBasedVideoRewarded;
+        MobileAds.Initialize("ca-app-pub-3254112346644116~7744970686");
         RequestRewardBasedVideo ();
      }
      private void OnMouseDown()
      {
-         rewardBasedVideo.Show ();
+        if (rewardBasedVideo.IsLoaded()) {
+            rewardBasedVideo.Show();
+            }
+        else{
+            RequestRewardBasedVideo ();
+            }
+            
      }
      public void RequestRewardBasedVideo ()
      {
-         rewardBasedVideo.LoadAd (new AdRequest.Builder ()
-      .AddTestDevice ("899D4765E14315B984A6EBF2C6A48441")
-      .Build (), adUnitIdRewardedVideo);
+         rewardBasedVideo.LoadAd (new AdRequest.Builder().Build(), "ca-app-pub-3254112346644116/5107145158");
      
      }
      public void HandleRewardBasedVideoRewarded(object sender, Reward args)
     {
-        game.timer_flag=false;
+        game = GameObject.FindWithTag("panel").GetComponent<Game>();
+        gameover = GameObject.FindWithTag("gameover");
         Destroy(gameover);
+        Destroy(game.list);
+        game.Spawn_list();
+        
     }
  }

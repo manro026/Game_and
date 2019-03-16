@@ -8,7 +8,7 @@ public class Game : MonoBehaviour {
     public GameObject end_menu;
     public GameObject mini_left;
     public GameObject mini_right;
-    private GameObject list;
+    public GameObject list;
     private GameObject mini_list;
     private Animation mini_clip;
     private Animation clip;
@@ -59,7 +59,7 @@ public class Game : MonoBehaviour {
                                 {
                                     StartCoroutine(svaip_list_right());
                                     good_svaip();
-                                    StartCoroutine(mini_svaip_right());
+                                  //  StartCoroutine(mini_svaip_right());
                                 }
                                 else
                                     game_over();
@@ -70,7 +70,7 @@ public class Game : MonoBehaviour {
                                 {
                                     StartCoroutine(svaip_list_left());
                                     good_svaip();
-                                    StartCoroutine(mini_svaip_left());
+                                    //StartCoroutine(mini_svaip_left());
                                 }
                                 else
                                     game_over();
@@ -86,7 +86,7 @@ public class Game : MonoBehaviour {
         }
     }
 
-    private void Spawn_list() {
+    public void Spawn_list() {
         timer_flag = false;
         preview = select_list;
         switch (select_list)
