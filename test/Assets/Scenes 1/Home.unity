@@ -186,7 +186,7 @@ Transform:
   m_GameObject: {fileID: 228240120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.53494227, y: 0.53494227, z: 0.53494227}
+  m_LocalScale: {x: 0.52022004, y: 0.52022004, z: 0.52022004}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -203,7 +203,6 @@ GameObject:
   - component: {fileID: 323156000}
   - component: {fileID: 323155999}
   - component: {fileID: 323155998}
-  - component: {fileID: 323156001}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -293,21 +292,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323155996}
   m_CullTransparentMesh: 0
---- !u!114 &323156001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 323155996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.8745098}
-  m_EffectDistance: {x: 4, y: 4}
-  m_UseGraphicAlpha: 1
 --- !u!1 &334249010
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,7 +566,6 @@ GameObject:
   - component: {fileID: 1374619351}
   - component: {fileID: 1374619350}
   - component: {fileID: 1374619349}
-  - component: {fileID: 1374619352}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -672,21 +655,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374619347}
   m_CullTransparentMesh: 0
---- !u!114 &1374619352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1374619347}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.91764706}
-  m_EffectDistance: {x: 4, y: 4}
-  m_UseGraphicAlpha: 1
 --- !u!1 &2026641723
 GameObject:
   m_ObjectHideFlags: 0
